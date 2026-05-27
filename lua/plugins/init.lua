@@ -15,7 +15,7 @@ return {
 
   {
     'mrcjkb/rustaceanvim',
-    version = '^5', -- Recommended
+    version = '^9', -- Recommended
     lazy = false, -- This plugin is already lazy
     ft = "rust",
     config = function ()
@@ -73,15 +73,10 @@ return {
     ft = {"toml"},
     config = function()
       require("crates").setup {
-        completion = {
-          cmp = {
-            enabled = true
-          },
+        lsp = {
+          enabled = true,
         },
       }
-      require('cmp').setup.buffer({
-        sources = { { name = "crates" }}
-      })
     end
   },
 
