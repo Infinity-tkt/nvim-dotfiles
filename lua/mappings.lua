@@ -14,4 +14,7 @@ map({ "n", "t" }, "<leader><leader>", function()
 map({ "n", "t" }, "<leader>gl", function()
   require("nvchad.term").toggle { pos = "float", id = "lazygit_term", size = 1, cmd="lazygit"} end, { noremap = true, desc = "New lazygit term" })
 
+-- rustaceanvim
+map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
