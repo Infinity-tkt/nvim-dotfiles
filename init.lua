@@ -35,3 +35,5 @@ require "autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+require("epitech_header").setup({ header_guard = "define" })
